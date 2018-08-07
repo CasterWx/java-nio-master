@@ -1,80 +1,6 @@
 # java-nio-master
 java nio
 
-* Ŀ¼
-	* [������](#������)
-	* [ͨ��](#ͨ��)
-	
-# ������ 
-## ��Java NiO�и������ݵĴ�ȥ���������������顣���ڴ洢��ͬ���������͵����ݡ�
-## ���ݲ�ͬ�������ͣ�Boolean���⣩���ṩ����Ӧ���͵Ļ�����
-
-1. ByteBuffer
-2. CharBuffer
-3. IntBuffer
-4. LongBuffer
-5. FloatBuffer
-6. DoubleBuffer
-7. shortBuffer
-
-### ��������ͨ��allocate()��û�����
-
-## ��������ȡ���ݵ��������ķ���
-1. put() �������ݵ�������
-2. get() ��û�����������
-
-## ���������ĸ���������
-1. capacity ���� �����������洢���ݵ�������һ���������ܸı䡣
-2. limit ���� ����ʾ�������п��Բ������ݵĴ�С��limit������ݲ��ܲ�����
-3. position λ�� �������������ڲ�����λ��
-> poistionС��limitС��capacity
-4. filps ������ģʽ ��limit��position��position��0
->		ByteBuffer buf = ByteBuffer.allocate(1024);
->		System.out.println(buf.position());
->		System.out.println(buf.limit());
->		System.out.println(buf.capacity());
-> ��� �� 0
->		1024
->		1024
-
-### ����ָ����С�Ļ�����
-#### ByteBuffer buf = ByteBuffer.allocate(1024);
-### put() 
-#### �������ݵ�������
-### get()
-#### ��û�����������
-### rewind()
-#### position��0�����ظ���֮ǰ����
-### clear()
-#### ��ջ��������ص����״̬����Ȼ����������գ����������ݻ��ڣ�ֻ������Щ���ݴ��ڱ�����״̬��
-### mark() 
-#### ���λ��
-### reset()
-#### �ص�markλ�ô�
-
-# ͨ��
-## ����Դ�ڵ��Ŀ��ڵ�����ӣ���NIO�и��𻺳������ݵĴ��䡣Channel�����洢���ݣ������Ҫ��ϻ��������д���/
-## ͨ������Ҫʵ����:
-### java.nio.channels.Channels�ӿڣ�
-> FileChannel
-> SocketChannel
-> ServerSocketChannel
-> DatagramChannel
-
-## ��ȡͨ��
-### 1.Java���֧��ͨ�������ṩ��getChannel()����
->	����IO:
->	FileInputStream/FileOutputStream
->	RandomAccessFile
->
->	����IO:
->	Soctet
->	ServerSocket
->	DatagramSocket
-### 2.��JDK1.7�е�NIO.2��Ը���ͨ���ṩ��һ����̬����open()
-### 3.��JDK1.7�е�Files�������newByteChannel()
-	
-
 ### [一　Java IO，硬骨头也能变软](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247483981&idx=1&sn=6e5c682d76972c8d2cf271a85dcf09e2&chksm=fd98542ccaefdd3a70428e9549bc33e8165836855edaa748928d16c1ebde9648579d3acaac10#rd)
 
 ### 主要内容：
@@ -87,7 +13,7 @@ java nio
 
 ![按操作对象分类结构图](https://user-gold-cdn.xitu.io/2018/5/16/16367d673b0e268d?w=720&h=535&f=jpeg&s=46081)
 
-### [二　java IO体系的学习总结](https://blog.csdn.net/nightcurtis/article/details/51324105) 
+### [二　java IO体系的学习总结](https://blog.csdn.net/nightcurtis/article/details/51324105)
 1. **IO流的分类：**
    - 按照流的流向分，可以分为输入流和输出流；
    - 按照操作单元划分，可以划分为字节流和字符流；
@@ -98,7 +24,7 @@ java nio
 
    - **InputStream/Reader**: 所有的输入流的基类，前者是字节输入流，后者是字符输入流。
    - **OutputStream/Writer**: 所有输出流的基类，前者是字节输出流，后者是字符输出流。
-3. **常用的io流的用法** 
+3. **常用的io流的用法**
 
 ### [三　Java IO面试题](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247483985&idx=1&sn=38531c2cee7b87f125df7aef41637014&chksm=fd985430caefdd26b0506aa84fc26251877eccba24fac73169a4d6bd1eb5e3fbdf3c3b940261#rd)
 
@@ -145,9 +71,9 @@ java nio
     ByteBuffer buf = ByteBuffer.allocate(28);//以ByteBuffer为例子
     ```
     - 写入数据到缓冲区（Writing Data to a Buffer）
-    
+
      **写数据到Buffer有两种方法：**
-      
+
       1.从Channel中写数据到Buffer
       ```java
       int bytesRead = inChannel.read(buf); //read into buffer.
@@ -158,7 +84,7 @@ java nio
       ```
 
 4. **Buffer常用方法测试**
-     
+
     说实话，NIO编程真的难，通过后面这个测试例子，你可能才能勉强理解前面说的Buffer方法的作用。
 
 
@@ -166,7 +92,7 @@ java nio
 ### 主要内容:
 
 1.  **Channel（通道）介绍**
-     - 通常来说NIO中的所有IO都是从 Channel（通道） 开始的。 
+     - 通常来说NIO中的所有IO都是从 Channel（通道） 开始的。
      - NIO Channel通道和流的区别：
 2. **FileChannel的使用**
 3. **SocketChannel和ServerSocketChannel的使用**
@@ -178,7 +104,7 @@ java nio
    - 在Java NIO中如果一个channel是FileChannel类型的，那么他可以直接把数据传输到另一个channel。
    - transferFrom() :transferFrom方法把数据从通道源传输到FileChannel
    - transferTo() :transferTo方法把FileChannel数据传输到另一个channel
-   
+
 
 ### [四　Java NIO之Selector（选择器）](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247483970&idx=1&sn=d5e2b133313b1d0f32872d54fbdf0aa7&chksm=fd985423caefdd354b587e57ce6cf5f5a7bec48b9ab7554f39a8d13af47660cae793956e0f46#rd)
 ### 主要内容:
@@ -197,13 +123,13 @@ java nio
    SelectionKey key = channel.register(selector, Selectionkey.OP_READ);
    ```
    -  SelectionKey介绍
-   
+
       一个SelectionKey键表示了一个特定的通道对象和一个特定的选择器对象之间的注册关系。
    - 从Selector中选择channel(Selecting Channels via a Selector)
-   
+
      选择器维护注册过的通道的集合，并且这种注册关系都被封装在SelectionKey当中.
    - 停止选择的方法
-     
+
      wakeup()方法 和close()方法。
 3.  **模板代码**
 
