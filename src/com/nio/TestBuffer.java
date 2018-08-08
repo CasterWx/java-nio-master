@@ -11,7 +11,7 @@ public class TestBuffer {
 	public void test(){
 		String str = "abcdef" ;
 		// 分配指定大小的缓冲区
-		ByteBuffer buf = ByteBuffer.allocate(1024);
+		ByteBuffer buf = ByteBuffer.allocate(1024*10);
 		log(buf);
 		buf.put(str.getBytes()) ;
 		log(buf);
