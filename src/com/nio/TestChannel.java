@@ -16,8 +16,8 @@ public class TestChannel {
 		FileChannel outChannel = null ;
 		
 		try {
-			fis = new FileInputStream("README.md");
-			fos = new FileOutputStream("R.md"); 
+			fis = new FileInputStream(""); //filename
+			fos = new FileOutputStream("");  // outname
 
 			//获取通道
 			 inChannel = fis.getChannel();
