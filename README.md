@@ -1,5 +1,5 @@
 # java-nio-master
-java nio
+java Nio
 
 ### [一　Java IO，硬骨头也能变软](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247483981&idx=1&sn=6e5c682d76972c8d2cf271a85dcf09e2&chksm=fd98542ccaefdd3a70428e9549bc33e8165836855edaa748928d16c1ebde9648579d3acaac10#rd)
 
@@ -175,5 +175,5 @@ Java7中新增了AsynchronousFileChannel作为nio的一部分。AsynchronousFile
 
 ### [在 Java 7 中体会 NIO.2 异步执行的快乐](https://www.ibm.com/developerworks/cn/java/j-lo-nio2/index.html)
 
-### [Java AIO总结与示例](https://blog.csdn.net/x_i_y_u_e/article/details/52223406)
+### [Java AIO总结](https://blog.csdn.net/x_i_y_u_e/article/details/52223406)
 AIO是异步IO的缩写，虽然NIO在网络操作中，提供了非阻塞的方法，但是NIO的IO行为还是同步的。对于NIO来说，我们的业务线程是在IO操作准备好时，得到通知，接着就由这个线程自行进行IO操作，IO操作本身是同步的。
