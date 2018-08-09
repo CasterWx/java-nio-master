@@ -32,8 +32,8 @@ public class TestChannel {
 			}	
 				
 		} catch (Exception e) {
-			// TODO: handle exception
 			System.out.println("error");
+//			Syserr;
 		}finally {
 			try {
 				inChannel.close();
