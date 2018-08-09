@@ -15,7 +15,6 @@ public class TestBuffer {
 		log(buf);
 		buf.put(str.getBytes()) ;
 		log(buf);
-		
 		// 切换为读取数据模式 flip
 		buf.flip();
 		log(buf);
